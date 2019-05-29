@@ -1,0 +1,20 @@
+.telephone {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    position: relative;
+    @include lView {
+        display: none;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background-size: cover;
+        left: -18px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url("../img/icons/phone.svg");
+    }
+}

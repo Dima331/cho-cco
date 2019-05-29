@@ -1,0 +1,11 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    font-family: "AlegreyaSans";
+    color: #ffffff;
+    align-items: center;
+    padding: 25px 0 10px 0;
+    @include lView { 
+        padding: 25px 0 0 0;
+    } 
+}

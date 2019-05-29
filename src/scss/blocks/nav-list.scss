@@ -1,0 +1,14 @@
+.nav-list {
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    @include lView {
+        display: none;
+    }
+}
+.nav-list__item{
+    margin-right: 25px;
+    &:last-child{
+        margin-left: 0;
+    }
+}

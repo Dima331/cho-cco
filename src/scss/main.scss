@@ -1,26 +1,6 @@
-
 @import "base/*.scss";
-
-
-$ui: rgb(86, 194, 236);
-
-
-body {
-    color: $ui;
-    display: flex;
-    font-size: 2432px;
-}
-
-
-
-@media (max-width: 3432432px){
-    body {
-        color: $ui;
-        display: flex;
-        font-size: 2432px;
-    }
-}
-
+@import "blocks/*.scss";
+@import "sections/*.scss";
 
 
 

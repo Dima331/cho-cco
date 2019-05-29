@@ -60,7 +60,7 @@ gulp.task("icons", () => {
 });
 
 gulp.task('pug', () => {
-    return gulp.src('src/pages/**/*.pug')
+    return gulp.src('src/pages/*.pug')
     .pipe(pug())
     .pipe(gulp.dest('dist'))
     .pipe(reload({ stream: true }))
@@ -85,7 +85,11 @@ gulp.task('sass', () => {
         .pipe(concat('main.min.scss'))
         .pipe(sassGlob())
         .pipe(sass().on('error', sass.logError))
-        .pipe(px2rem())
+        .pipe(px2rem({
+            dpr: 1,             
+            rem: 16,            
+            one: false          
+          }))
         .pipe(gcmq())
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],

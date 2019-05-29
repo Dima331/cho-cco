@@ -1,135 +1,155 @@
-$test:#0f0;
-
-p{
-    color: $test;
-}
-
-@media (max-width: 342px){
-    p{
-        column-rule-color: #0f0;
+@mixin sView {
+    @media (max-width: 450px) {
+        @content;
     }
 }
 
-@font-face {
-    font-family: 'alegreya_sans_mediumitalic';
-    src: url('alegreyasans-mediumitalic-webfont.woff2') format('woff2'),
-         url('alegreyasans-mediumitalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+@mixin mView {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+@mixin mhView {
+    @media (max-width: 950px) and (max-height: 1000px){
+        @content;
+    }
+}
+@mixin lView {
+    @media only screen and (max-width: 950px){
+        @content;
+    }
 }
 
-@font-face {
-    font-family: 'alegreya_sansregular';
-    src: url('alegreyasans-regular-webfont.woff2') format('woff2'),
-         url('alegreyasans-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 
+@mixin fxlView {
+    @media (min-width: 1200px) and (min-height: 875px){
+        @content;
+    }
 }
 
-@font-face {
-    font-family: 'alegreya_sans_thinregular';
-    src: url('alegreyasans-thin-webfont.woff2') format('woff2'),
-         url('alegreyasans-thin-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 
-}
-@font-face {
-    font-family: 'alegreya_sans_thinitalic';
-    src: url('alegreyasans-thinitalic-webfont.woff2') format('woff2'),
-         url('alegreyasans-thinitalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'AlegreyaSans', Arial, Helvetica, sans-serif;
+    line-height: 1.42;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-@font-face {
-    font-family: 'alegreya_sans_lightregular';
-    src: url('alegreyasans-light-webfont.woff2') format('woff2'),
-         url('alegreyasans-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'alegreya_sans_lightitalic';
-    src: url('alegreyasans-lightitalic-webfont.woff2') format('woff2'),
-         url('alegreyasans-lightitalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'alegreya_sans_mediumregular';
-    src: url('alegreyasans-medium-webfont.woff2') format('woff2'),
-         url('alegreyasans-medium-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+body,
+html {
+    height: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    @include mView { 
+        font-size: 0.8rem;
+    }
+    @include sView { 
+        font-size: 0.6rem;
+    }
+    @include mhView { 
+        font-size: 0.6rem;
+    }
+    @media (max-width: 600px) and (max-height: 1000px) {
+        font-size: 0.6rem;
+    }
 }
 
-@font-face {
-    font-family: 'alegreya_sansbold_italic';
-    src: url('alegreyasans-bolditalic-webfont.woff2') format('woff2'),
-         url('alegreyasans-bolditalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-@font-face {
-    font-family: 'alegreya_sans_extraboldRg';
-    src: url('alegreyasans-extrabold-webfont.woff2') format('woff2'),
-         url('alegreyasans-extrabold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+p,
+h3,
+h1,
+h2,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
 }
 
-@font-face {
-    font-family: 'alegreya_sans_extrabolditalic';
-    src: url('alegreyasans-extrabolditalic-webfont.woff2') format('woff2'),
-         url('alegreyasans-extrabolditalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
 }
 
-@font-face {
-    font-family: 'alegreya_sansitalic';
-    src: url('alegreyasans-italic-webfont.woff2') format('woff2'),
-         url('alegreyasans-italic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+.container {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    @include lView {
+        width: 95%;
+    }
 }
 
-@font-face {
-    font-family: 'alegreya_sans_blackregular';
-    src: url('alegreyasans-black-webfont.woff2') format('woff2'),
-         url('alegreyasans-black-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+.wrapper {
+    overflow: hidden;
+    //min-width: 1100px;
+    //min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-@font-face {
-    font-family: 'alegreya_sans_blackitalic';
-    src: url('alegreyasans-blackitalic-webfont.woff2') format('woff2'),
-         url('alegreyasans-blackitalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+section {
+    height: 100vh;
 }
 
-@font-face {
-    font-family: 'alegreya_sansbold';
-    src: url('alegreyasans-bold-webfont.woff2') format('woff2'),
-         url('alegreyasans-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+a {
+    text-decoration: none;
+    color: inherit;
 }
+
+h1 {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 60px;
+    text-transform: uppercase;
+    @include mhView{
+        font-size: 48px;
+        line-height: 3rem;
+    }
+}
+
+.btn {
+    color: #0f5a47;
+    font-family: "AlegreyaSans";
+    font-size: 19px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #fff;
+    padding: 20px 35px;
+    border-radius: 45px;
+    border: 0;
+    box-shadow: -2px 3px 10px 1px #0000003b;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+
+
+/*
+@mixin xxlView {
+    @media (max-width: 1800px) {
+        @content;
+    }
+}*/
