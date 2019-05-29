@@ -9,17 +9,18 @@
         @content;
     }
 }
-@mixin mhView {
-    @media (max-width: 950px) and (max-height: 1000px){
-        @content;
-    }
-}
+
 @mixin lView {
     @media only screen and (max-width: 950px){
         @content;
     }
 }
 
+@mixin mhView {
+    @media (max-width: 950px) and (max-height: 1000px){
+        @content;
+    }
+}
 
 @mixin fxlView {
     @media (min-width: 1200px) and (min-height: 875px){
@@ -137,19 +138,7 @@ h1 {
     border: 0;
     box-shadow: -2px 3px 10px 1px #0000003b;
     cursor: pointer;
-
     &:focus {
         outline: none;
     }
 }
-
-
-
-
-
-/*
-@mixin xxlView {
-    @media (max-width: 1800px) {
-        @content;
-    }
-}*/

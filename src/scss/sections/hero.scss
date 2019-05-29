@@ -1,36 +1,42 @@
-.hero{
+.hero {
     background-color: #61c4d9;
     background-image: url("../img/hero/hero-bg1.png");
     background-repeat: no-repeat;
     background-position: 100% 100%;
     background-size: contain;
     padding-bottom: 50px;
-    @include lView { 
+
+    @include lView {
         background-size: auto;
         background-position: top right;
         padding-bottom: 0;
-    } 
+    }
 }
-.hero-content{
+
+.hero-content {
     display: flex;
     margin: auto;
-    @include lView { 
+
+    @include lView {
         flex-direction: column;
         margin: unset;
         align-items: center;
-    } 
-    @include mView { 
+    }
+
+    @include mView {
         margin: auto;
     }
-    @include mhView { 
+
+    @include mhView {
         margin: auto;
     }
 }
-.hero__container{
+
+.hero__container {
     display: flex;
-    height: 100%; 
-    position: relative; 
-    &::after{
+    height: 100%;
+    position: relative;
+    &::after {
         content: "";
         position: absolute;
         width: 1056px;
@@ -41,16 +47,19 @@
         background-repeat: no-repeat;
         left: -3.125rem;
         background-image: url("../img/hero/leaves.png");
-        @include fxlView { 
+
+        @include fxlView {
             width: 1300px;
             height: 420px;
             left: -10.125rem;
-        } 
-        @include lView { 
+        }
+
+        @include lView {
             display: none;
-        } 
-    }  
-    &::before{
+        }
+    }
+
+    &::before {
         content: "";
         position: absolute;
         width: 387px;
@@ -60,39 +69,43 @@
         bottom: -110px;
         right: -4px;
         background-image: url("../img/hero/main-berries.png");
-        @include fxlView { 
+
+        @include fxlView {
             width: 28.1875rem;
             height: 20.875rem;
             right: -6.25rem;
-        } 
-        @include lView { 
+        }
+
+        @include lView {
             display: none;
-        } 
-    } 
+        }
+    }
 }
+
 .hero-content__left,
-.hero-content__right{
+.hero-content__right {
     position: relative;
     width: 45%;
-    @include fxlView { 
+
+    @include fxlView {
         width: 48%;
-    } 
-    @include lView { 
+    }
+
+    @include lView {
         width: 420px;
-    } 
-}
-.hero-content__left{
-    @include lView { 
-        order: 2;
-    } 
+    }
 }
 
-.hero-content__right{
-    @include lView { 
+.hero-content__left {
+    @include lView {
+        order: 2;
+    }
+}
+
+.hero-content__right {
+    @include lView {
         order: 1;
         margin-bottom: 30px;
-    margin-top: -10px;
-    } 
+        margin-top: -10px;
+    }
 }
-
-
