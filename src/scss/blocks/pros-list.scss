@@ -1,0 +1,93 @@
+.pros-list {
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  z-index: 10;
+
+  @include mView {
+      flex-direction: column;
+      margin-left: 0;
+      align-items: center;
+  }
+
+  .pros-list__item {
+    position: relative;
+    width: calc(100% / 3);
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include lView {
+      margin-right: 25px;
+    }
+
+    @include mView {
+      width: 280px;
+      margin-right: 0;
+    }
+
+    &:last-child {
+      &::before {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 67px;
+      height: 21px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      top: 24%;
+      right: -57px;
+      background-image: url("../img/excellence/dots.png");
+      transform: translateY(-50%);
+      @include lView {
+        display: none;
+      }
+    }
+  }
+}
+
+.plus {
+  @include mView {
+      width: 280px;
+      margin-right: 0;
+      margin-bottom: 38px;
+
+      &:last-child {
+          margin-bottom: 0;
+      }
+  }
+
+  .plus__pic {
+    width: 125px;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f5f4;
+    border-radius: 50%;
+    margin-bottom: 33px;
+
+    .plus__img {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  .plus__title {
+    margin-bottom: 25px;
+  }
+
+  .plus__dec {
+    color: #666666;
+    font-size: 18px;
+  }
+}

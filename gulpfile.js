@@ -85,11 +85,11 @@ gulp.task('sass', () => {
         .pipe(concat('main.min.scss'))
         .pipe(sassGlob())
         .pipe(sass().on('error', sass.logError))
-        .pipe(px2rem({
+        /*.pipe(px2rem({
             dpr: 1,             
             rem: 16,            
             one: false          
-          }))
+          }))*/
         .pipe(gcmq())
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],

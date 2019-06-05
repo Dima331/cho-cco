@@ -1,0 +1,37 @@
+.candy-headline {
+  color: #ffffff;
+
+  .candy-headline__title {
+    margin-bottom: 6px;
+    margin-left: -5px;
+
+    @include mView {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .candy-headline__slogan {
+    margin-bottom: 30px;
+    line-height: 1.2;
+    width: 85%;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 400;
+
+    @media only screen and (max-width: 900px) {
+      width: 100%;
+    }
+
+    @include mView {
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include ssView {
+      width: 95%;
+      font-size: 18px;
+    }
+  }
+}

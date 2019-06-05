@@ -1,0 +1,19 @@
+- 
+    var excellence = [ 
+        { img: 'img/excellence/1.svg', title : "Полезно", dec: 'Натуральность - ключевое качество нашей продукции. Мы используем только природные ингредиенты.'},
+        { img: 'img/excellence/3.svg', title : "Вкусно", dec: 'Нежный, ненавязчивый, изысканный – так клиенты описывают вкусовые качества наших батончиков.'}, 
+        { img: 'img/excellence/2.svg', title : "Питательно", dec: 'Высокое содержание качественного белка, а также всех необходимых витаминов и минералов.'}
+    ]
+
+section.excellence
+    .excellence__container.container
+        .excellence__text
+            h2.excellence__title почему chocco?
+            p.excellence__dec В нашем мире все происходит очень быстро, поэтому мы делаем батончики, которые удобно взять с собой.
+        ul.pros-list
+            each val in excellence
+                li.pros-list__item.plus
+                    .plus__pic
+                        img(src=val.img, alt="icon").plus__img
+                    h3.plus__title= val.title
+                    p.plus__dec= val.dec

@@ -1,0 +1,77 @@
+.excellence {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 315px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 55%;
+    left: 0;
+    background-image: url("../img/excellence/fern leaf.png");
+    transform: translateY(-50%);
+
+    @include lView {
+      top: 18%;
+      transform: translateY(0%);
+    }
+
+    @include ssView {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 161px;
+    height: 315px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 0;
+    bottom: -124px;
+    background-image: url("../img/excellence/raspberries.png");
+
+    @include lView {
+      bottom: -5%;
+    }
+
+    @include sView {
+      bottom: -13%;
+    }
+  }
+
+  .excellence__title {
+    margin-bottom: 10px;
+  }
+
+  .excellence__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .excellence__text {
+    width: 410px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+
+    @include mView {
+      margin-bottom: 41px;
+    }
+
+    @include sView {
+      width: 100%;
+    }
+
+    .excellence__dec {
+      color: #666666;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}

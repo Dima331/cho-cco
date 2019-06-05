@@ -1,20 +1,36 @@
 .telephone {
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    position: relative;
-    @include lView {
-        display: none;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+
+  .telephone__link {
+    padding-left: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background-size: cover;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url("../img/icons/phone.svg");
     }
-    &::before{
-        content: "";
-        position: absolute;
-        width: 12px;
-        height: 12px;
-        background-size: cover;
-        left: -18px;
-        top: 50%;
-        transform: translateY(-50%);
-        background-image: url("../img/icons/phone.svg");
+  }
+
+  @include lView {
+    display: none;
+  }
+
+  &:hover {
+    color: #0f5a47;
+
+    .telephone__link {
+      &::before {
+        background-image: url("../img/icons/phone-green.svg");
+      }
     }
+  }
 }

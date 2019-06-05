@@ -1,0 +1,33 @@
+.hero-candy__bg {
+    position: absolute;
+    background-image: url("../img/hero/Candybars.png");
+    width: 500px;
+    height: 520px;
+    top: -30%;
+    left: 16%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media only screen and (max-width: 1025px) {
+        width: 120%;
+        height: 120%;
+        top: -10%;
+        left: 76%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translateX(-50%);
+    }
+
+    @include mView {
+        display: none;
+    }
+}
+
+.hero-candy__pic {
+    display: none;
+
+    @include mView {
+        display: block;
+        margin: 0 auto;
+    }
+}

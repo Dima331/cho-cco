@@ -1,0 +1,12 @@
+- 
+    var arr = [ 
+        { img: 'img/icons/5.svg', text : "100% натуральный продукт"},
+        { img: 'img/icons/6.svg', text : "3-5 дней доставка по РФ"}, 
+        { img: 'img/icons/4.svg', text : "Не портит фигуру"}
+    ]
+ul.advantages
+    each val in arr
+        li.advantages__item.advantage
+            .advantage__pic
+                img(src=val.img, alt="icon").advantage__icon
+            .advantage__text= val.text

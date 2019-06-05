@@ -1,0 +1,54 @@
+.burger {
+  position: absolute;
+  right: -15px;
+  top: 46%;
+  transform: translateY(-50%);
+
+  .burger__container {
+    cursor: pointer;
+    transition: transform 400ms;
+    user-select: none;
+    display: none;
+
+    @include lView {
+      display: block;
+    }
+
+    .burger__line {
+      fill: none;
+      transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+      stroke: #fff;
+      stroke-width: 8.5;
+      stroke-linecap: round;
+    }
+
+    .burger__top {
+      stroke-dasharray: 40 82;
+    }
+
+    .burger__middle {
+      stroke-dasharray: 40 111;
+    }
+
+    .burger__bottom {
+      stroke-dasharray: 40 161;
+    }
+  }
+}
+
+.burger-active {
+  transform: rotate(45deg);
+
+  .burger__top {
+    stroke-dasharray: 17 82;
+    stroke-dashoffset: -62px;
+  }
+
+  .burger__middle {
+    stroke-dashoffset: 23px;
+  }
+
+  .burger__bottom {
+    stroke-dashoffset: -83px;
+  }
+}

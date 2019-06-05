@@ -1,14 +1,23 @@
 .nav-list {
-    display: flex;
-    font-size: 18px;
-    font-weight: 600;
-    @include lView {
-        display: none;
-    }
-}
-.nav-list__item{
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+
+  @include lView {
+    display: none;
+  }
+
+  .nav-list__item {
     margin-right: 25px;
-    &:last-child{
-        margin-left: 0;
+
+    &:last-child {
+      margin-right: 0;
     }
+  }
+
+  .nav-list__link {
+    &:hover {
+      color: #0f5a47;
+    }
+  }
 }
