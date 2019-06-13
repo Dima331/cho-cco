@@ -1,0 +1,32 @@
+- 
+    var candyBar = [ 
+    { img: 'img/candy-slider/1.png', title : 'Батончик “Морские водоросли”',  dec:'Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав также входят: сухое молоко, заменитель сахара и какао бобы.',  quantity: [{name:'Калорийность:', numbers:'120 ккал'}, {name:'Вес:', numbers:'98 грамм'}],   price: '100'},
+    { img: 'img/candy-slider/2.png', title : 'Батончик “Гранола виноград”',   dec: 'Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.', quantity: [{name:'Калорийность:', numbers:'100 ккал'}, {name:'Вес:', numbers:'98 грамм'}],  price: '140'}
+    ]
+
+section.slider-candies
+    .slider-candies__container.container   
+        ul.candies-list
+            each val in candyBar
+                li.candies-list__item.candy-bar
+                    .candy-bar__left
+                        img(src=val.img, alt="candy").candy-bar__img
+                    .candy-bar__right.candy-about
+                        h3.candy-about__title= val.title
+                        .candy-about__composition.composition
+                            .composition__title Состав:
+                            p.composition__dec= val.dec
+                        ul.candy-about__nutrients.nutrients
+                            each quantity in val.quantity
+                                li.nutrients__item     
+                                    .nutrients__info= quantity.name   
+                                    .nutrients__quantity= quantity.numbers
+                        .candy-about__candy-price.candy-price
+                                .candy-price__price= val.price
+                                    span.dollars $
+                                button(name="button").candy-price__btn Заказать
+        .candies-navigation
+            .candies-navigation__prev
+            .candies-navigation__next
+        
+

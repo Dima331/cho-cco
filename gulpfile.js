@@ -20,11 +20,14 @@ sass.compiler = require('node-sass')
 
 const style = [
     "node_modules/normalize.css/normalize.css",
+    'node_modules/slick-carousel/slick/slick.css',   
     "src/scss/main.scss"
 ];
 const lib = [
-    'src/js/**/*.js',
-    'node_modules/jquery/dist/jquery.min.js'
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/slick-carousel/slick/slick.min.js',
+    'src/js/**/*.js'
+    
 ];
 
 

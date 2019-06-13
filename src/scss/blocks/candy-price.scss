@@ -1,0 +1,27 @@
+.candy-price__price{
+   margin-right: 32px;
+   @include mView {
+        justify-content: center;
+    }
+}
+
+.candy-price {
+    display: flex; 
+    color: #0d0d0d;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    @include ssView {
+        font-size: 50px;
+    }
+}
+
+.candy-price__btn{
+    color: #fff;
+    background-color: #0f5a47;
+    box-shadow: none;
+}
+
+
+

@@ -1,0 +1,18 @@
+.composition{
+    margin-bottom: 45px;
+}
+.composition__title{
+    color: #323232;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 24px;
+    @include mView {
+        margin-bottom: 15px;
+    }
+}
+
+.composition__dec{
+    font-weight: 400;
+}
+

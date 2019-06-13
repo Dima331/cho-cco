@@ -1,0 +1,30 @@
+.nutrients{
+    display: flex;
+    flex-direction: row;
+    color: #333333;
+    font-size: 18px;
+    @include mView {
+        justify-content: center;
+      }
+    
+}
+.nutrients__item{
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    &:last-child{
+        margin-right: 0; 
+    }
+    @include mView {
+        margin-right: 70px;
+    text-align: left;
+    }
+}
+
+.nutrients__info{
+    font-weight: 600;
+    line-height: 1;
+}
+.nutrients__quantity{
+    font-weight: 700;
+}

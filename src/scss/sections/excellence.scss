@@ -39,7 +39,10 @@
     }
 
     @include sView {
-      bottom: -13%;
+      bottom: -6%;
+      width: 111px;
+      height: 215px;
+      background-size: contain;
     }
   }
 

@@ -118,16 +118,31 @@ h2 {
   }
 }
 
-h3 {
+h3{
+  color: #0d0d0d;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+  @include mView {
+    font-size: 30px;
+  }
+  @include ssView {
+    font-size: 24px;
+  }
+}
+h4 {
   font-size: 27px;
   font-weight: 700;
   line-height: 1;
 }
 
+
 p {
   font-size: 18px;
   color: #666666;
   line-height: 1.2;
+
   @include ssView {
     font-size: 16px;
   }
