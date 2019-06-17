@@ -12,6 +12,9 @@
     font-weight: 400;
     line-height: 1;
     text-transform: uppercase;
+    @include mView {
+        justify-content: center;
+    }
     @include ssView {
         font-size: 50px;
     }

@@ -1,0 +1,122 @@
+.reviews {
+  background-color: #fff;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 173px;
+    height: 99px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 20px;
+    right: 10px;
+    background-image: url("../img/reviews/strawberry.png");
+
+    @include mView {
+      width: 137px;
+      height: 79px;
+    }
+
+    @media (max-width: 550px) {
+      display: none;
+    }
+  }
+}
+
+.reviews__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  .slick-initialized .slick-slide {
+    display: flex;
+  }  
+}
+
+.reviews__title {
+  margin-bottom: 35px;
+  margin-left: 3px;
+}
+
+.feedback__left {
+  margin-right: 20px;
+  width: 30%;
+
+  @include mView {
+    width: 204px;
+    height: 209px;
+    margin-right: 0;
+  }
+}
+
+.feedback__right {
+  width: 53%;
+
+  @include lView {
+    width: 55%;
+  }
+
+  @include mView {
+    width: 100%;
+  }
+}
+
+.reviews-list {
+  width: 100%;
+  background-color: #f8faf9;
+  padding: 50px 45px 40px 45px;
+  position: relative;
+  margin-bottom: 35px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 127px;
+    height: 167px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    right: 0;
+    background-image: url("../img/reviews/raspberry branch.png");
+
+    @include sView {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 25px;
+    background-color: #fff;
+    top: 0;
+    right: 50%;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    transform: translateX(50%);
+  }
+
+  @include mView {
+    width: 460px;
+    padding: 65px 30px 40px 30px;
+    text-align: center;
+  }
+
+  @include sView {
+    width: 95%;
+  }
+}
+
+.reviews-list__item {
+    display: flex;
+    align-items: center;
+  
+    @include mView {
+      flex-direction: column;
+    }
+  
+    &:focus {
+      outline: none;
+    }
+  }

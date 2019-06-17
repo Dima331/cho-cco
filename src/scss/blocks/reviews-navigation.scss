@@ -1,0 +1,48 @@
+.reviews-navigation {
+    display: flex;
+    .slick-list {
+        overflow: initial;
+    }
+    .slick-track{
+        transform: none !important;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .slick-current{
+        border-radius: 50%;
+        box-shadow: 0px 0px 0px 8px #0f5a47;
+    }
+}
+
+.reviews-navigation__item {
+    width: 94px !important;
+    height: 94px;
+    margin-right: 40px;
+    &:focus{
+        outline: none;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include mView {
+        width: 84px !important;
+        height: 84px;
+    }
+
+    @include sView {
+        margin-right: 30px;
+        width: 74px !important;
+        height: 74px;
+    }
+
+    .reviews-navigation__img {
+        border-radius: 50%;
+        width: 100%;
+        cursor: pointer;
+    }
+    
+
+}
+
