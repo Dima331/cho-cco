@@ -1,0 +1,113 @@
+.team {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 196px;
+    height: 578px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: -237px;
+    right: 0;
+    background-image: url("../img/team/blueberry.png");
+
+    @include mView {
+      width: 171px;
+      height: 462px;
+      top: -216px;
+      right: -40px;
+    }
+  }
+}
+
+.team__title {
+  margin-bottom: 40px;
+  z-index: 10;
+}
+
+.team__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  z-index: 15;
+
+  @include mView {
+    width: 462px;
+  }
+
+  @include sView {
+    width: 95%;
+  }
+}
+
+.team-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 10;
+  height: 430px;
+
+  @include mView {
+    height: 100%;
+    margin-right: -10px;
+  }
+
+  @include mView {
+    flex-wrap: wrap;
+    margin-right: 0;
+  }
+
+  .team-list__item {
+    @include lView {
+      margin-right: 10px;
+    }
+
+    @include mView {
+      margin-right: 0;
+    }
+
+    @include sView {
+      width: 49%;
+    }
+  }
+
+  .team-list__item:nth-child(3) {
+    @include mView {
+      margin-top: 30px;
+    }
+  }
+
+  .team-list__item:nth-child(4) {
+    @include mView {
+      margin-top: 30px;
+    }
+  }
+}
+
+.team-list__item {
+  transition: transform 0.4s;
+  transform: translateY(0px);
+  cursor: pointer;
+}
+
+.team-list__item-active {
+  transition: transform 0.4s;
+  transform: translateY(50px);
+
+  @include mView {
+    transform: translateY(0);
+  }
+
+  .person__about {
+    overflow: none;
+    transition: height 0.4s;
+  }
+
+  .person__name {
+    &::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}
