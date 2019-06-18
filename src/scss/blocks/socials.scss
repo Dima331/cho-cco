@@ -1,0 +1,15 @@
+.socials{
+    display: flex;
+    .socials__item{
+        width: 25px;
+        height: 25px;
+        margin-right: 20px;
+        opacity: 0.3;
+        &:last-child{
+            margin-right: 0;
+        }
+        &:hover{
+            opacity: 1;
+        }
+    } 
+}

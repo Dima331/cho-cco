@@ -1,0 +1,51 @@
+.footer {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  padding: 23px 0;
+
+  @include mView {
+    padding: 30px 0;
+  }
+
+  .footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mView {
+      flex-direction: column;
+    }
+  }
+
+  .footer__telephone {
+    line-height: 1;
+    color: #0f5a47;
+
+    @include lView {
+      display: flex;
+      justify-content: center;
+    }
+
+    @include mView {
+      margin-bottom: 14px;
+    }
+
+    .telephone__link {
+      &::before {
+        background-image: url("../img/icons/phone-green.svg");
+      }
+    }
+  }
+
+  .direction {
+    color: #010101;
+
+    @include mView {
+      margin-bottom: 11px;
+    }
+  }
+}
