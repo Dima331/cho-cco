@@ -1,0 +1,37 @@
+.menu {
+  padding: 0;
+  position: relative;
+  background-image: url("../img/menu/bg-menu.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include mView {
+    height: 80vh;
+  }
+  &:before {
+    content: "";
+    width: 104px;
+    height: 114px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -73px;
+    left: 63px;
+    background-image: url("../img/menu/himbeere.png");
+  }
+  .menu__title {
+    color: #ffffff;
+    position: absolute;
+    left: 80px;
+    top: 100px;
+    @include sView {
+      left: 10px;
+      top: 60px;
+    }
+  }
+
+  .menu-list {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
