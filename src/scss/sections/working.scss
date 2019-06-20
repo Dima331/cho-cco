@@ -1,0 +1,94 @@
+.working {
+  background-color: #fff;
+  position: relative;
+
+  &:before {
+    content: "";
+    width: 158px;
+    height: 422px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -230px;
+    left: 0;
+    background-image: url("../img/working/berries.png");
+    @include mView {
+        top: -173px;
+        width: 95px;
+        height: 317px;
+      }
+  }
+}
+
+.working__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  
+}
+
+.working__title {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.video {
+  width: 660px;
+  height: 405px;
+  background-color: #375c26;
+  position: relative;
+  @include mView {
+    width: 82%;
+    height: 363px;
+  }
+  @media (max-width: 650px) {
+    height: 300px;
+  }
+  @include sView {
+    width: 89%;
+    height: 240px;
+  }
+  @include ssView {
+    height: 190px;
+  }
+  &:before {
+    content: "";
+    width: 90px;
+    height: 77px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -60px;
+    right: -108px;
+    background-image: url("../img/working/leaves-2.png");
+    @include mView {
+        top: -47px;
+        right: -47px;
+      width: 62px;
+      height: 53px;
+    }
+  }
+
+  &:after {
+    content: "";
+    width: 72px;
+    height: 135px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: -34px;
+    left: -140px;
+    background-image: url("../img/working/leaves-1.png");
+    @include mView {
+      width: 46px;
+      height: 95px;
+      bottom: 90px;
+      left: -90px;
+    }
+    @include sView {
+        bottom: -59px;
+        left: -42px;
+    }
+  }
+}
