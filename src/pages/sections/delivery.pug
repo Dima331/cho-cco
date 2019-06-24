@@ -1,0 +1,54 @@
+section.delivery
+    .delivery__container.container 
+        h2.delivery__title Закажите доставку
+        form.form__tag(action='')
+            .form__column
+                .form__row
+                    label.form__block
+                        .form__block-title Имя
+                        input.form__input.form-field(type='text', placeholder='')
+                    label.form__block
+                        .form__block-title Телефон
+                        input.form__input.form-field(type='text', placeholder='')
+                .form__row
+                    label.form__block
+                        .form__block-title Улица
+                        input.form__input.form-field(type='text', placeholder='')
+                .form__row
+                    label.form__block
+                        .form__block-title Дом
+                        input.form__input.form-field(type='text', placeholder='')
+                    label.form__block
+                        .form__block-title Корпус
+                        input.form__input.form-field(type='text', placeholder='')
+                    label.form__block
+                        .form__block-title Квартира
+                        input.form__input.form-field(type='text', placeholder='')
+                    label.form__block
+                        .form__block-title Этаж
+                        input.form__input.form-field(type='text', placeholder='')
+            .form__column
+                .form__row.form__row-margin
+                    label.form__block
+                        .form__block-title Комментарий
+                        textarea.form__textarea.form-field(name='')
+                
+                
+                
+                .form__row.form__row-radio
+                    label.form__block.radio(for='yes')
+                        input#yes.radio__input(type='radio', name='card')
+                        span.radio__label Потребуется сдача
+                    label.form__block.radio(for='no')
+                        input#no.radio__input(type='radio', name='card')
+                        span.radio__label Оплата по карте
+                .form__row.form__row-checkbox  
+                    label.form__block.checkbox
+                        input(type='checkbox', name='call').checkbox__input
+                        span.checkbox__label Не перезванивать
+    
+                        
+                .form__row.form__row-btn
+                    .form__buttons
+                        button.form__button.form__button-order(type='submit') Заказать 
+                        button.form__button.form__button-reset(type='reset') Очистить

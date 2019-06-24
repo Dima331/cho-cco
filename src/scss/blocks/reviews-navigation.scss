@@ -1,5 +1,6 @@
 .reviews-navigation {
     display: flex;
+    z-index: 2;
     .slick-list {
         overflow: initial;
     }

@@ -17,6 +17,12 @@
     top: -73px;
     left: 63px;
     background-image: url("../img/menu/himbeere.png");
+    @include ssView {
+      width: 80px;
+      height: 94px;
+      top: -49px;
+      left: 17px;
+    }
   }
   .menu__title {
     color: #ffffff;

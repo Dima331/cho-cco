@@ -1,0 +1,49 @@
+.delivery {
+  background-image: url("../img/delivery/pattern.png");
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 242px;
+    height: 264px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: -15px;
+    right: -44px;
+    background-image: url("../img/delivery/Blackberry.png");
+    transform: translateY(-50%);
+    @include mView {
+      top: 18px;
+      right: -41px;
+      width: 180px;
+      height: 204px;
+    }
+  }
+}
+
+.delivery__container {
+  position: relative;
+  height: 100%;
+  width: 940px;
+  align-items: center;
+  justify-content: center;
+
+  @include mView {
+    width: 475px;
+  }
+
+  @include sView {
+    width: 95%;
+  }
+}
+
+.delivery__title {
+  margin-bottom: 52px;
+  color: #0f5a47;
+  text-align: center;
+
+  @include mView {
+    margin-bottom: 42px;
+  }
+}

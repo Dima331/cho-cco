@@ -17,6 +17,10 @@
         width: 95px;
         height: 317px;
       }
+      @include sView {
+        top: -97px;
+      }
+      
   }
 }
 
@@ -31,6 +35,7 @@
 .working__title {
   margin-bottom: 60px;
   text-align: center;
+  z-index: 2;
 }
 
 .video {

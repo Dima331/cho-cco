@@ -12,7 +12,7 @@
     left: 0;
     background-image: url("../img/excellence/fern leaf.png");
     transform: translateY(-50%);
-
+    
     @include lView {
       top: 18%;
       transform: translateY(0%);
@@ -35,9 +35,11 @@
     background-image: url("../img/excellence/raspberries.png");
 
     @include lView {
+      bottom: -17%;
+    }
+    @include mView {
       bottom: -5%;
     }
-
     @include sView {
       bottom: -6%;
       width: 111px;
