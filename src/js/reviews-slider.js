@@ -1,4 +1,4 @@
-;(function () {
+(function () {
      $('.reviews-list').slick({ 
         slidesToShow: 1,  // по одному слайдеру 
         slidesToScroll: 1, // по одному менять

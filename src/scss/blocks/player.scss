@@ -1,0 +1,29 @@
+$green: #7ab049;
+
+.plyr__control--overlaid {
+  background: $green;
+}
+
+.plyr--video .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__control:hover,
+.plyr__control:focus,
+.plyr--video .plyr__control[aria-expanded="true"] {
+  background: $green;
+  color: #fff;
+}
+.plyr__control.plyr__tab-focus {
+  -webkit-box-shadow: 0 0 0 5px rgba(0, 179, 255, 0.5);
+  box-shadow: 0 0 0 5px rgba(64, 182, 60, 0.5);
+  outline: 0;
+}
+
+.plyr__poster {
+  background-size: cover;
+}
+.plyr--full-ui input[type="range"] {
+  color: $green;
+}
+.plyr__menu__container
+  .plyr__control[role="menuitemradio"][aria-checked="true"]::before {
+  background: $green;
+}

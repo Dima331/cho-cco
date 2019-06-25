@@ -1,6 +1,6 @@
 .working {
-  background-color: #fff;
   position: relative;
+  background-color: #f8faf9;
 
   &:before {
     content: "";
@@ -40,23 +40,16 @@
 
 .video {
   width: 660px;
-  height: 405px;
+  //height: 405px;
   background-color: #375c26;
   position: relative;
   @include mView {
     width: 82%;
-    height: 363px;
-  }
-  @media (max-width: 650px) {
-    height: 300px;
   }
   @include sView {
     width: 89%;
-    height: 240px;
   }
-  @include ssView {
-    height: 190px;
-  }
+
   &:before {
     content: "";
     width: 90px;

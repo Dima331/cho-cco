@@ -28,7 +28,9 @@
   width: 940px;
   align-items: center;
   justify-content: center;
-
+  @media (max-width: 1070px) {
+    width: 95%;
+  }
   @include mView {
     width: 475px;
   }

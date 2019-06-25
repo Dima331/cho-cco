@@ -6,6 +6,8 @@
   "dependencies": {
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
+    "one-page-scroll": "^0.2.5",
+    "plyr": "^3.5.6",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
