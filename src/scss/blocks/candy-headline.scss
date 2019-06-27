@@ -34,4 +34,10 @@
       font-size: 18px;
     }
   }
+  .candy-headline__btn{
+    z-index: 20;
+    @include mView {
+      z-index: auto;
+    }
+  }
 }

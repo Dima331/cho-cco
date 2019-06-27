@@ -26,8 +26,8 @@ const style = [
 ];
 const lib = [
     'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/mobile-detect/mobile-detect.min.js',
     'node_modules/slick-carousel/slick/slick.min.js',
-    'node_modules/one-page-scroll/one-page-scroll.min.js',
     'node_modules/plyr/dist/plyr.min.js',
     'src/js/**/*.js'
     
@@ -74,20 +74,20 @@ gulp.task('pug', () => {
 
 gulp.task("scripts", () => {
     return gulp.src(lib)
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(concat('main.min.js', { newLine: ";" }))
-        //.pipe(babel({
-        //    presets: ['@babel/env']
-        //}))
-        //.pipe(uglify())
-        .pipe(sourcemaps.write())
+        .pipe(babel({
+           presets: ['@babel/env']
+        }))
+        .pipe(uglify())
+        //.pipe(sourcemaps.write())
         .pipe(gulp.dest('dist/js'))
         .pipe(reload({ stream: true }))
 });
 
 gulp.task('sass', () => {
     return gulp.src(style)
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(concat('main.min.scss'))
         .pipe(sassGlob())
         .pipe(sass().on('error', sass.logError))
@@ -102,7 +102,7 @@ gulp.task('sass', () => {
             cascade: true
         }))
         .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(sourcemaps.write())
+        //.pipe(sourcemaps.write())
         .pipe(gulp.dest('dist/css'))
         .pipe(reload({ stream: true }))
 });

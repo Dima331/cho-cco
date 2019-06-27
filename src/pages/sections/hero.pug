@@ -1,4 +1,4 @@
-section.hero
+section.hero.section.active#sec1
     .hero__container.container   
         include ../elements/header.pug
         .hero-content
@@ -6,7 +6,7 @@ section.hero
                 h1.candy-headline__title натуральные шоколадные батончики
                 p.candy-headline__slogan Наши батончики идеально подходят для тех, 
                     | кто следит за своим здоровьем
-                button(name="button").candy-headline__btn Заказать
+                button(name="button" data-scroll-to="7").candy-headline__btn.order Заказать
             .hero-content__right.hero-candy
                 .hero-candy__bg
                 img(src="img/hero/m-Candybars.png", alt="candy").hero-candy__pic    

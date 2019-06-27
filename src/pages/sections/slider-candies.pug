@@ -4,7 +4,7 @@
     { img: 'img/candy-slider/2.png', title : 'Батончик “Гранола виноград”',   dec: 'Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.', quantity: [{name:'Калорийность:', numbers:'100 ккал'}, {name:'Вес:', numbers:'98 грамм'}],  price: '140'}
     ]
 
-section.slider-candies
+section.slider-candies.section#sec3
     .slider-candies__container.container   
         ul.candies-list
             each val in candyBar
@@ -24,7 +24,7 @@ section.slider-candies
                         .candy-about__candy-price.candy-price
                                 .candy-price__price= val.price
                                     span.dollars $
-                                button(name="button").candy-price__btn Заказать
+                                button(name="button" data-scroll-to="7").candy-price__btn.order Заказать
         .candies-navigation
             .candies-navigation__prev
             .candies-navigation__next

@@ -1,0 +1,33 @@
+.delivery__overflow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2f3234;
+    opacity: 0.99;
+  display: none;
+}
+.delivery__overflow-active{
+    display: flex;
+}
+.message{
+    padding: 38px 60px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.message__text{
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.message__btn{
+    color: #fff;
+    background-color: #0f5a47;
+    box-shadow: none;
+}

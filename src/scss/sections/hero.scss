@@ -1,109 +1,116 @@
 .hero {
-  background-color: #61c4d9;
-  background-image: url("../img/hero/hero-bg1.png");
-  background-repeat: no-repeat;
-  background-position: 100% 100%;
-  background-size: contain;
-  padding-top: 25px;
+    background-color: #61c4d9;
+    background-image: url("../img/hero/hero-bg1.png");
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: contain;
+    padding-top: 25px;
 
-  @include mView {
-    background-size: auto;
-    background-position: top right;
-  }
+    @include mView {
+        background-size: auto;
+        background-position: top right;
+    }
 
-  .header {
-    z-index: 3;
-  }
+    .header {
+        z-index: 3;
+    }
 
-  .advantages {
-    z-index: 2;
-  }
+    .advantages {
+        z-index: 2;
+    }
 }
 
 .hero-content {
-  display: flex;
-  margin: auto;
-  padding-top: 15px;
+    display: flex;
+    margin: auto;
+    padding-top: 15px;
 
-  @include mView {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 48px;
-    padding-top: 0;
-    width: 470px;
-  }
+    @include mView {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 48px;
+        padding-top: 0;
+        width: 470px;
+    }
 
-  @include sView {
-    width: 100%;
-    margin-top: -20px;
-    margin-bottom: 25px;
-  }
+    @include sView {
+        width: 100%;
+        margin-top: -20px;
+        margin-bottom: 25px;
+    }
 }
 
 .hero__container {
-  display: flex;
-  height: 100%;
-  position: relative;
+    display: flex;
+    height: 100%;
+    position: relative;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 1056px;
-    height: 355px;
-    bottom: -91px;
-    left: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    left: -3.125rem;
-    background-image: url("../img/hero/leaves.png");
+    &::after {
+        content: "";
+        position: absolute;
+        width: 565px;
+        height: 447px;
+        bottom: -124px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        right: -163px;
+        background-image: url("../img/hero/main-berries.png");
 
-    @include mView {
-      display: none;
+        @media (max-width: 1200px) {
+            width: 465px;
+            height: 347px;
+            bottom: -84px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            right: -66px;
+        }
+        @include mView {
+            display: none;
+        }
     }
-  }
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 387px;
-    height: 286px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    bottom: -80px;
-    right: 10px;
-    background-image: url("../img/hero/main-berries.png");
+    &::before {
+        content: "";
+        position: absolute;
+        width: 72px;
+        height: 108px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        bottom: -89px;
+        left: -49px;
+        background-image: url("../img/working/leaves-1.png");
 
-    @include lView {
-      display: none;
+        @include lView {
+            display: none;
+        }
     }
-  }
 }
 
 .hero-content__left,
 .hero-content__right {
-  position: relative;
-  width: 45%;
+    position: relative;
+    width: 45%;
 
-  @include mView {
-    text-align: center;
-    width: 100%;
-  }
+    @include mView {
+        text-align: center;
+        width: 100%;
+    }
 }
 
 .hero-content__left {
-  @include mView {
-    order: 2;
-  }
+    @include mView {
+        order: 2;
+    }
 }
 
 .hero-content__right {
-  @include mView {
-    order: 1;
-    margin-bottom: 30px;
-    margin-top: -10px;
-  }
+    @include mView {
+        order: 1;
+        margin-bottom: 30px;
+        margin-top: -10px;
+    }
 
-  @include sView {
-    margin-bottom: 19px;
-  }
+    @include sView {
+        margin-bottom: 19px;
+    }
 }

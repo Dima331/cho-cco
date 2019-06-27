@@ -6,23 +6,23 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
     link(rel='stylesheet', href='css/main.min.css')
     title CHOCCO
-    script(src="https://api-maps.yandex.ru/2.1/?apikey=b2012ce0-a1aa-48d2-b538-bd84b92846c8&lang=ru_RU" type="text/javascript")
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=b2012ce0-a1aa-48d2-b538-bd84b92846c8&lang=ru_RU")
   body.body
     .wrapper
-      include sections/hero.pug
-      include sections/excellence.pug
-      include sections/slider-candies.pug
-      include sections/team.pug
-      include sections/menu.pug
-      include sections/reviews.pug
-      include sections/working.pug
-      include sections/delivery.pug
-      include sections/map.pug
-      include elements/navigation.pug
-
+      .maincontent
+        include sections/hero.pug
+        include sections/excellence.pug
+        include sections/slider-candies.pug
+        include sections/team.pug
+        include sections/menu.pug
+        include sections/reviews.pug
+        include sections/working.pug
+        include sections/delivery.pug
+        include sections/map.pug
       include elements/overflow-menu.pug
-   
-    script(type="text/javascript" src="js/main.min.js")
+      include elements/navigation.pug
+    script(src="js/main.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js")
     
 
 

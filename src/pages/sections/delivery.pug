@@ -1,7 +1,7 @@
-section.delivery
+section.delivery.section#sec8
     .delivery__container.container 
         h2.delivery__title Закажите доставку
-        form.form__tag(action='')
+        form.form__tag(action="index.php")
             .form__column
                 .form__row
                     label.form__block
@@ -31,10 +31,7 @@ section.delivery
                 .form__row.form__row-margin
                     label.form__block
                         .form__block-title Комментарий
-                        textarea.form__textarea.form-field(name='')
-                
-                
-                
+                        textarea.form__textarea.form-field(name='text')                
                 .form__row.form__row-radio
                     label.form__block.radio(for='yes')
                         input#yes.radio__input(type='radio', name='card')
@@ -45,10 +42,12 @@ section.delivery
                 .form__row.form__row-checkbox  
                     label.form__block.checkbox
                         input(type='checkbox', name='call').checkbox__input
-                        span.checkbox__label Не перезванивать
-    
-                        
+                        span.checkbox__label Не перезванивать                     
                 .form__row.form__row-btn
                     .form__buttons
                         button.form__button.form__button-order(type='submit') Заказать 
                         button.form__button.form__button-reset(type='reset') Очистить
+    .delivery__overflow
+       .delivery__message.message
+            p.message__text Сообщение отправлено 
+            button.message__btn Закрыть

@@ -1,20 +1,20 @@
 - 
     var nav = [ 
-        { name: 'О нас',    link : "Розовый фильтр"},
-        { name: 'Батончики',    link : "Смайлики"}, 
-        { name: 'Команда',  link : "Комментарии"},
-        { name: 'Меню',     link : "Смайлики"},
-        { name: 'Отзывы',   link : "Смайлики"},
-        { name: 'Как мы работаем',  link : "Смайлики"},
-        { name: 'Контакты',     link : "Смайлики"}
+        { name: 'О нас',    link : "#sec2"},
+        { name: 'Батончики',    link : "#sec3"}, 
+        { name: 'Команда',  link : "#sec4"},
+        { name: 'Меню',     link : "#sec5"},
+        { name: 'Отзывы',   link : "#sec6"},
+        { name: 'Как мы работаем',  link : "#sec7"},
+        { name: 'Контакты',     link : "#sec8"}
     ]
 header.header
     .logo cho cco
     nav.nav
         ul.nav-list
-            each val in nav
+            each val, index in nav
                 li.nav-list__item
-                    a(href=val.link class="nav-list__link")= val.name
+                    a(href=val.link class="nav-list__link" data-scroll-to=index+1)= val.name
     address.telephone
         a(href="tel:+88009039090").telephone__link 8 800 903 90 90
     include ../elements/burger.pug
