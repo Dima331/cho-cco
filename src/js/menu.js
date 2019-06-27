@@ -4,7 +4,7 @@
 
         var width = $(window).width()
         var thisElement = $(this)
-
+        var minusPx;
         if (width < 930 && width > 800) {
             closeBlock()
             width = width - 300

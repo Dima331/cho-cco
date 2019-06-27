@@ -11,7 +11,7 @@
         ],
             myCollection = new ymaps.GeoObjectCollection({}, {
                 iconLayout: 'default#image',
-                iconImageHref: '../img/footer/item.png',
+                iconImageHref: 'img/footer/item.png',
                 iconImageSize: [46, 57],
                 iconImageOffset: [-26, -52]
             });
